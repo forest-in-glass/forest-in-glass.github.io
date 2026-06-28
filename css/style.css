@@ -1,0 +1,853 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f5ef;
+    color:#2d2d2d;
+    line-height:1.7;
+    font-size:18px;
+}
+
+p{
+    font-size:18px;
+}
+
+li{
+    font-size:17px;
+}
+
+button{
+    font-size:16px;
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:94%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* NAVIGATION */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    background:rgba(31,58,46,.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 5%;
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:white;
+
+    font-size:32px;
+
+}
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    opacity:.7;
+
+}
+
+/* HERO */
+
+.hero{
+
+    height:100vh;
+
+    background:url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.overlay{
+
+    background:rgba(0,0,0,.35);
+
+    padding:60px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:90px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    background:#1f3a2e;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* SECTIONS */
+
+section{
+
+    padding:100px 0;
+
+}
+
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    text-align:center;
+
+    color:#1f3a2e;
+
+    margin-bottom:25px;
+
+}
+
+.intro{
+    font-size:20px;
+
+    text-align:center;
+
+    max-width:600px;
+
+    margin:auto;
+
+    margin-bottom:50px;
+
+}
+
+/* ABOUT */
+
+#about p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+/* GALLERY */
+
+#gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+/* CARD */
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+}
+
+.card-content{
+
+    padding:30px;
+
+}
+
+.card-content p{
+    font-size:17px;
+}
+
+.card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    margin-bottom:8px;
+
+}
+
+.year{
+
+    color:#888;
+
+    margin-bottom:12px;
+    
+    font-size:16px;
+
+}
+
+.status{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#edf3ee;
+
+    color:#1f3a2e;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+}
+
+/* PROCESS AND CARE */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.info-card{
+
+    background:white;
+
+    border-left:5px solid #8b6f47;
+
+    border-radius:8px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    padding:34px;
+
+}
+
+.info-label{
+
+    color:#8b6f47;
+
+    display:block;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    margin-bottom:14px;
+
+    text-transform:uppercase;
+
+}
+
+.info-card h3{
+
+    color:#1f3a2e;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    line-height:1.15;
+
+    margin-bottom:14px;
+
+}
+
+.info-card p{
+
+    font-size:18px;
+
+}
+
+.care-info{
+
+    margin-top:40px;
+
+}
+
+/* CONTACT */
+
+#contact{
+
+    text-align:center;
+
+}
+
+.contact-links{
+
+    margin-top:30px;
+
+}
+
+.contact-links p{
+
+    margin:12px;
+
+}
+
+.contact-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.contact-links a:hover {
+    opacity: 0.7;
+}
+
+/* MODAL */
+
+#modal{
+
+    display:none;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.8);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:1001;
+
+}
+
+#modal-content{
+
+    position:relative;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    max-width:1000px;
+
+    width:90%;
+
+    max-height:90vh;
+
+    display:flex;
+
+    flex-direction:row;
+
+    gap:35px;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+#close{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    border:none;
+
+    background:none;
+
+    font-size:40px;
+
+    cursor:pointer;
+
+    line-height:1;
+
+    z-index:20;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#1f3a2e;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+nav ul{
+
+    gap:15px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+.overlay{
+
+    padding:40px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+h2{
+
+    font-size:42px;
+
+}
+
+.card img{
+
+    height:280px;
+
+}
+
+section{
+
+    padding:70px 0;
+
+}
+
+}
+
+
+
+/* VIEWER — lijeva strana, relativno za overlay strelice */
+
+#viewer{
+
+    flex:1 1 55%;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:0;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+#modal-photo{
+
+    display:block;
+
+    width:100%;
+
+    max-height:65vh;
+
+    object-fit:contain;
+
+    transition:opacity .25s;
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* STRELICE NA SLICI */
+
+#prev,
+#next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:rgba(31,58,46,.75);
+
+    color:white;
+
+    font-size:18px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    z-index:10;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:background .2s;
+
+}
+
+#prev{ left:10px; }
+
+#next{ right:10px; }
+
+#prev:hover,
+#next:hover{
+
+    background:rgba(31,58,46,1);
+
+}
+
+/* TOČKICE */
+
+#dots{
+
+    position:absolute;
+
+    bottom:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:7px;
+
+}
+
+.dot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.5);
+
+    transition:background .2s;
+
+    cursor:pointer;
+
+}
+
+.dot.active{
+
+    background:white;
+
+}
+
+/* INFO — desna strana */
+
+#modal-info{
+
+    flex:1 1 40%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:0;
+
+}
+
+#modal-info h2{
+
+    font-size:42px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#1f3a2e;
+
+    line-height:1.1;
+
+}
+
+#modal-info p{
+
+    font-size:17px;
+
+    color:#444;
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    #modal{
+
+        align-items:flex-start;
+
+        overflow-y:auto;
+
+    }
+
+    #modal-content{
+
+        position:relative;
+
+        top:auto;
+
+        left:auto;
+
+        width:100%;
+
+        max-width:100%;
+
+        min-height:100dvh;
+
+        max-height:none;
+
+        border-radius:0;
+
+        padding:16px 16px 30px;
+
+        overflow-y:visible;
+
+        flex-direction:column;
+
+        gap:16px;
+
+    }
+
+    #close{
+
+        top:12px;
+
+        right:16px;
+
+        font-size:36px;
+
+        background:rgba(255,255,255,.9);
+
+        border-radius:50%;
+
+        width:40px;
+
+        height:40px;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        z-index:20;
+
+    }
+
+    #viewer{
+
+        flex:none;
+
+        width:100%;
+
+    }
+
+    #modal-photo{
+
+        max-height:55vh;
+
+        width:100%;
+
+        object-fit:contain;
+
+    }
+
+    #modal-info{
+
+        flex:none;
+
+        width:100%;
+
+    }
+
+    #modal-info h2{
+
+        font-size:30px;
+
+    }
+
+    #prev{ left:6px; }
+
+    #next{ right:6px; }
+
+}

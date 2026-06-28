@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biljni terariji</title>
+
+    <meta name="description" content="Ručno izrađeni biljni terariji i mali živi ekosustavi.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Biljni terariji</div>
+
+        <ul>
+            <li><a href="#about">Opis</a></li>
+            <li><a href="#collection">Kolekcija</a></li>
+            <li><a href="#process">Izrada</a></li>
+            <li><a href="#care">Njega</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="overlay">
+            <h1>Biljni terariji</h1>
+            <p>Ručno izrađeni mali živi ekosustavi.</p>
+            <a href="#collection" class="button">Pogledaj kolekciju</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>Opis</h2>
+            <p>
+                Biljni terariji mali su zatvoreni ekosustavi izrađeni od pažljivo odabranih
+                biljaka i materijala s ciljem stvaranja dugotrajnog živog krajolika koji unosi dio prirode u svakodnevni prostor. Obični prirodni elementi, promatrani iz druge perspektive, postaju veliki krajolici u malom formatu.
+            </p>
+        </div>
+    </section>
+
+    <section id="collection">
+        <div class="container">
+            <h2>Kolekcija</h2>
+            <p class="intro">Svaki terarij jedinstvena je mala kompozicija prirode.</p>
+
+            <div id="gallery">
+                <!-- gallery.js ubacuje kartice -->
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="container">
+            <h2>Kako nastaju</h2>
+
+            <div class="info-grid">
+                <article class="info-card">
+                    <span class="info-label">Biljke</span>
+                    <h3>Odabrane s pažnjom</h3>
+                    <p>
+                        Biljke se biraju iz uzgoja ili odgovornim odabirom iz prirode,
+                        uvijek s poštovanjem prema mjestu iz kojeg dolaze.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-label">Prirodni materijali</span>
+                    <h3>Kamen, drvo i tekstura</h3>
+                    <p>
+                        Osnovu kompozicije čine kamen i drvo pronađeni u prirodi, odabrani zbog
+                        oblika, boje i načina na koji stvaraju mali krajolik u staklu.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-label">Detalji</span>
+                    <h3>Prostor za nove materijale</h3>
+                    <p>
+                        U budućnosti će se u pojedinim terarijima pojavljivati i drugi materijali,
+                        poput malih figurica od mesinga, kao diskretan naglasak u kompoziciji.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="care">
+        <div class="container">
+            <h2>Njega</h2>
+
+            <div class="info-grid care-info">
+                <article class="info-card">
+                    <span class="info-label">Voda</span>
+                    <h3>Umjereno zalijevanje</h3>
+                    <p>
+                        Terarij treba malo vode i stabilnu vlagu. Zalijeva se rijetko, tek kada
+                        biljke i supstrat pokažu da im je potrebno osvježenje. Radi zadržavanja vlage terarij se može poklopiti prozirnom folijom s par probušenih rupica te tako izdržava dulje periode Vaše odsutnosti.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-label">Svjetlo</span>
+                    <h3>Blaga, neizravna svjetlost</h3>
+                    <p>
+                        Najbolje uspijeva na svijetlom mjestu bez izravnog sunca, kako bi biljke
+                        rasle mirno, a staklo se ne bi pregrijavalo.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-label">Ravnoteža</span>
+                    <h3>Mali stabilan ekosustav</h3>
+                    <p>
+                        Uz sobnu temperaturu i malo pažnje, terarij razvija vlastitu ravnotežu i
+                        ostaje živ, zelen i skladan kroz vrijeme. Terarij valja promatrati te ukloniti eventualne odumrle biljne djelove kako bi se održao zdrav razvoj.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Za upite i izradu po narudžbi.</p>
+
+            <div class="contact-links">
+				<p>
+					Email: <a href="mailto:forestinglass2026@gmail.com">
+					forestinglass2026@gmail.com
+					</a>
+				</p>
+			</div>
+        </div>
+    </section>
+
+    <div id="modal">
+        <div id="modal-content">
+            <button id="close" type="button" aria-label="Zatvori">×</button>
+            <div id="viewer">
+                <button id="prev" type="button" aria-label="Prethodni">◀</button>
+                <img id="modal-photo" src="" alt="Terarij">
+                <button id="next" type="button" aria-label="Sljedeći">▶</button>
+                <div id="dots"></div>
+            </div>
+            <div id="modal-info"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Forest in Glass © 2026</p>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
