@@ -48,6 +48,81 @@ var terrariums = [
     }
 ];
 
+var figures = [
+
+{
+    image: "images/figures/figure1.jpg",
+    name: "Zec",
+    size: "3 cm",
+	stock: 2
+},
+
+{
+    image: "images/figures/figure2.jpg",
+    name: "Žaba",
+    size: "2.5 cm",
+	stock: 6
+},
+
+{
+    image: "images/figures/figure3.jpg",
+    name: "Kobila i ždrijebe",
+    size: "1.5 - 2.5 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure4.jpg",
+    name: "Kobila i pastuh",
+    size: "2.5 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure5.jpg",
+    name: "Pčela",
+    size: "3 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure6.jpg",
+    name: "Skakavac",
+    size: "4 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure7.jpg",
+    name: "Bogomoljka",
+    size: "7.5 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure8.jpg",
+    name: "Vretence",
+    size: "5 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure9.jpg",
+    name: "Iguana",
+    size: "6 cm",
+	stock: 1
+},
+
+{
+    image: "images/figures/figure10.jpg",
+    name: "Zmaj",
+    size: "4.5 cm",
+	stock: 1
+},
+
+
+];
+
 var gallery = document.getElementById("gallery");
 var modal = document.getElementById("modal");
 var modalInfo = document.getElementById("modal-info");
@@ -82,7 +157,7 @@ function createCards() {
             '<div class="card-content">' +
             '<h3>' + terrarium.name + '</h3>' +
             '<p class="year">' + terrarium.year + '</p>' +
-            '<p>' + terrarium.description + '</p>' +
+ //           '<p>' + terrarium.description + '</p>' +
             '<div class="status">' + terrarium.status + '</div>' +
             '</div>';
 
@@ -94,15 +169,73 @@ function createCards() {
     }
 }
 
+function createFigureGallery() {
+
+    var container = document.getElementById("figure-gallery");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    for (var i = 0; i < figures.length; i++) {
+
+        var figure = figures[i];
+
+        var card = document.createElement("div");
+        card.className = "figure-card";
+
+        card.innerHTML =
+            '<img src="' + figure.image + '" alt="' + figure.name + '">' +
+			'<h3>' + figure.name + '</h3>' +
+			'<p class="figure-size">Veličina: ' + figure.size + //'</p>' +
+			'<p class="figure-stock">Dostupno komada: ' + figure.stock + '</p>';
+			
+		card.onclick = function () {
+			openFigure(this);
+		};
+
+        container.appendChild(card);
+    }
+}
+
+function openFigure(card) {
+
+    modal.style.display = "flex";
+
+    // sakrij strelice i točkice
+    prev.style.display = "none";
+    next.style.display = "none";
+    dotsContainer.style.display = "none";
+
+    // postavi fotografiju
+    photo.style.opacity = 1;
+    photo.src = card.querySelector("img").src;
+
+    // opis
+    modalInfo.innerHTML =
+        "<h2>" + card.querySelector("h3").innerHTML + "</h2>" +
+        "<p class='figure-size'>" +
+            card.querySelector(".figure-size").innerHTML +
+        "</p>" +
+        "<p class='figure-stock'>" +
+            card.querySelector(".figure-stock").innerHTML +
+        "</p>";
+}
+
 function openModal(index) {
+
+    prev.style.display = "block";
+    next.style.display = "block";
+    dotsContainer.style.display = "block";
+
     currentTerrarium = index;
     currentImage = 1;
     updateModal();
+
     modal.style.display = "flex";
 
-    // padding-top = visina nava da sadržaj ne bude ispod
-    var navH = document.querySelector('nav').offsetHeight;
-    document.getElementById('modal-content').style.paddingTop = (navH + 16) + 'px';
+    var navH = document.querySelector("nav").offsetHeight;
+    document.getElementById("modal-content").style.paddingTop = (navH + 16) + "px";
 }
 
 function updateModal(){
@@ -263,5 +396,7 @@ photo.addEventListener('touchend',function(e){
 preload();
 
 createCards();
+
+createFigureGallery();
 
 };
