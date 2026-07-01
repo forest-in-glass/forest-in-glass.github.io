@@ -140,6 +140,7 @@ photo.onclick=function(e){ e.stopPropagation(); };
 
 var currentTerrarium = 0;
 var currentImage = 1;
+var isFigureOpen = false;
 
 function imagePath(terrarium, index) {
     return "images/" + terrarium.folder + "/" + index + ".jpg";
@@ -200,6 +201,8 @@ function createFigureGallery() {
 
 function openFigure(card) {
 
+    isFigureOpen = true;
+
     modal.style.display = "flex";
 
     // sakrij strelice i točkice
@@ -220,9 +223,14 @@ function openFigure(card) {
         "<p class='figure-stock'>" +
             card.querySelector(".figure-stock").innerHTML +
         "</p>";
+
+    var navH = document.querySelector("nav").offsetHeight;
+    document.getElementById("modal-content").style.paddingTop = (navH + 16) + "px";
 }
 
 function openModal(index) {
+
+    isFigureOpen = false;
 
     prev.style.display = "block";
     next.style.display = "block";
@@ -312,7 +320,7 @@ window.onclick = function (event) {
  
 document.onkeydown=function(event){
 
-if(modal.style.display!="flex"){
+if(modal.style.display!="flex" || isFigureOpen){
 
 return;
 
@@ -386,7 +394,7 @@ photo.addEventListener('touchmove',function(e){
 },{passive:false});
 
 photo.addEventListener('touchend',function(e){
-    if(swipeDir!=='h') return;
+    if(swipeDir!=='h' || isFigureOpen) return;
     var dx=e.changedTouches[0].clientX-touchStartX;
     if(Math.abs(dx)>40){
         if(dx<0) nextImage(); else prevImage();
