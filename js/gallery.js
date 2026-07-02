@@ -1,10 +1,10 @@
-
 window.onload=function(){
 var terrariums = [
     {
         id: "terarij1",
         name: "Jungle boogie",
         year: "2026",
+        size: "\u03C6 14.5 cm, visina 20 cm",
         status: "Dostupan",
         description: "Jungle Boogie donosi mali prizor divlje prirode, gdje staro drvo pruža zaklon bujnom zelenilu i stvara dojam skrivenog kutka džungle.",
         folder: "terarij1",
@@ -14,6 +14,7 @@ var terrariums = [
         id: "terarij2",
         name: "Pinky stone",
         year: "2026",
+        size: "",
         status: "Dostupan",
         description: "Ružičasti kamen postaje središte malog krajolika, dok se fitonije i mahovina uz njega uzdižu poput zelenila koje osvaja šumsku stijenu.",
         folder: "terarij2",
@@ -23,6 +24,7 @@ var terrariums = [
         id: "terarij3",
         name: "Čaša puna zelenila",
         year: "2026",
+        size: "",
         status: "Dostupan",
         description: "U staklenoj čaši oblikovan je mali živi krajolik, poput gutljaja prirode koji na trenutak zaustavlja vrijeme i poziva na promatranje njezinih sitnih čuda.",
         folder: "terarij3",
@@ -32,6 +34,7 @@ var terrariums = [
         id: "terarij4",
         name: "Moon safari",
         year: "2026",
+        size: "",
         status: "Dostupan",
         description: "Otvoreni terarij stvoren za promatranje izbliza, gdje se među mahovinom, papratima i razigranim bojama fitonija otkrivaju sitni detalji prirodnog krajolika.",
         folder: "terarij4",
@@ -41,6 +44,7 @@ var terrariums = [
         id: "terarij5",
         name: "White gem",
         year: "2026",
+        size: "",
         status: "Dostupan",
         description: "Poput zaboravljenog dijela šume, gdje se među stijenama i starim drvom rađa život, ovaj terarij čuva mali, skriveni svijet koji očarava svojom prirodnom ravnotežom.",
         folder: "terarij5",
@@ -263,6 +267,7 @@ photo.src=imagePath(t,currentImage);
 modalInfo.innerHTML=
 '<h2>'+t.name+'</h2>'+
 '<p class="year">'+t.year+'</p>'+
+(t.size ? '<p class="figure-size">Veličina: '+t.size+'</p>' : '')+
 '<p>'+t.description+'</p>'+
 '<span class="status">'+t.status+'</span>';
 
