@@ -4,9 +4,9 @@ var terrariums = [
         id: "terarij1",
         name: "Jungle boogie",
         year: "2026",
-        size: "\u03C6 14.5 cm, visina 20 cm",
+        size: "\u03A6 14.5 cm, visina 20 cm",
         status: "Dostupan",
-        description: "Jungle Boogie donosi mali prizor divlje prirode, gdje staro drvo pruža zaklon bujnom zelenilu i stvara dojam skrivenog kutka džungle.",
+        description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij1",
         count: 4
     },
@@ -14,9 +14,9 @@ var terrariums = [
         id: "terarij2",
         name: "Pinky stone",
         year: "2026",
-        size: "",
+        size: "\u03A6 13.5 cm, visina 20 cm",
         status: "Dostupan",
-        description: "Ružičasti kamen postaje središte malog krajolika, dok se fitonije i mahovina uz njega uzdižu poput zelenila koje osvaja šumsku stijenu.",
+        description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij2",
         count: 4
     },
@@ -24,9 +24,9 @@ var terrariums = [
         id: "terarij3",
         name: "Čaša puna zelenila",
         year: "2026",
-        size: "",
+        size: "\u03A6 12 cm, visina 20 cm",
         status: "Dostupan",
-        description: "U staklenoj čaši oblikovan je mali živi krajolik, poput gutljaja prirode koji na trenutak zaustavlja vrijeme i poziva na promatranje njezinih sitnih čuda.",
+        description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij3",
         count: 3
     },
@@ -34,9 +34,9 @@ var terrariums = [
         id: "terarij4",
         name: "Moon safari",
         year: "2026",
-        size: "",
+        size: "\u03A6 16 cm, visina 13 cm",
         status: "Dostupan",
-        description: "Otvoreni terarij stvoren za promatranje izbliza, gdje se među mahovinom, papratima i razigranim bojama fitonija otkrivaju sitni detalji prirodnog krajolika.",
+        description: "",
         folder: "terarij4",
         count: 5
     },
@@ -44,9 +44,9 @@ var terrariums = [
         id: "terarij5",
         name: "White gem",
         year: "2026",
-        size: "",
+        size: "\u03A6 13 cm, visina 21.5 cm",
         status: "Dostupan",
-        description: "Poput zaboravljenog dijela šume, gdje se među stijenama i starim drvom rađa život, ovaj terarij čuva mali, skriveni svijet koji očarava svojom prirodnom ravnotežom.",
+        description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij5",
         count: 4
     }
@@ -162,7 +162,7 @@ function createCards() {
             '<div class="card-content">' +
             '<h3>' + terrarium.name + '</h3>' +
             '<p class="year">' + terrarium.year + '</p>' +
- //           '<p>' + terrarium.description + '</p>' +
+            (terrarium.size ? '<p class="figure-size">Veličina: ' + terrarium.size + '</p>' : '') +
             '<div class="status">' + terrarium.status + '</div>' +
             '</div>';
 
