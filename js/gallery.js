@@ -24,7 +24,7 @@ var terrariums = [
         id: "terarij3",
         name: "Čaša puna zelenila",
         year: "2026",
-        size: "\u03A6 12 cm, visina 20 cm",
+        size: "\u03A6 14 cm, visina 21.5 cm",
         status: "Dostupan",
         description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij3",
@@ -49,7 +49,48 @@ var terrariums = [
         description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij5",
         count: 4
+    },
+	{
+        id: "terarij6",
+        name: "Sunset beach",
+        year: "2026",
+        size: "\u03A6 14 cm, visina 21.5 cm",
+        status: "Dostupan",
+        description: "",
+        folder: "terarij6",
+        count: 4
+    },
+	{
+        id: "terarij7",
+        name: "Fantasy realm",
+        year: "2026",
+        size: "\u03A6 18 cm, visina 15.5 cm",
+        status: "Dostupan",
+        description: "Uključen prozirni poklopac od pleksiglasa.",
+        folder: "terarij7",
+        count: 5
+    },
+	{
+        id: "terarij8",
+        name: "Dragon stones",
+        year: "2026",
+        size: "\u03A6 12 cm, visina 15.5 cm",
+        status: "Dostupan",
+        description: "",
+        folder: "terarij8",
+        count: 4
+    },
+	{
+        id: "terarij9",
+        name: "Jasper stones",
+        year: "2026",
+        size: "\u03A6 12 cm, visina 15.5 cm",
+        status: "Dostupan",
+        description: "",
+        folder: "terarij9",
+        count: 3
     }
+	
 ];
 
 var figures = [
