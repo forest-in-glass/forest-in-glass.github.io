@@ -191,6 +191,12 @@ function imagePath(terrarium, index) {
     return "images/" + terrarium.folder + "/" + index + ".jpg";
 }
 
+function statusClass(status) {
+    if (status === "Nedostupan") return " nedostupan";
+    if (status === "Rezerviran") return " rezerviran";
+    return "";
+}
+
 function createCards() {
     for (var i = 0; i < terrariums.length; i++) {
         var terrarium = terrariums[i];
@@ -204,7 +210,7 @@ function createCards() {
             '<h3>' + terrarium.name + '</h3>' +
             '<p class="year">' + terrarium.year + '</p>' +
             (terrarium.size ? '<p class="figure-size">Veličina: ' + terrarium.size + '</p>' : '') +
-            '<div class="status">' + terrarium.status + '</div>' +
+            '<div class="status' + statusClass(terrarium.status) + '">' + terrarium.status + '</div>' +
             '</div>';
 
         card.onclick = function () {
@@ -310,7 +316,7 @@ modalInfo.innerHTML=
 '<p class="year">'+t.year+'</p>'+
 (t.size ? '<p class="figure-size">Veličina: '+t.size+'</p>' : '')+
 '<p>'+t.description+'</p>'+
-'<span class="status">'+t.status+'</span>';
+'<span class="status'+statusClass(t.status)+'">'+t.status+'</span>';
 
 // dots
 dotsContainer.innerHTML='';
