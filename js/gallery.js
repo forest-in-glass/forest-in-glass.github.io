@@ -85,7 +85,7 @@ var terrariums = [
         name: "Jasper stones",
         year: "2026",
         size: "\u03A6 12 cm, visina 15.5 cm",
-        status: "Dostupan",
+        status: "Nedostupan",
         description: "",
         folder: "terarij9",
         count: 3
