@@ -25,7 +25,7 @@ var terrariums = [
         name: "Čaša puna zelenila",
         year: "2026",
         size: "\u03A6 14 cm, visina 21.5 cm",
-        status: "Dostupan",
+        status: "Nedostupan",
         description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij3",
         count: 3
@@ -65,7 +65,7 @@ var terrariums = [
         name: "Fantasy realm",
         year: "2026",
         size: "\u03A6 18 cm, visina 15.5 cm",
-        status: "Dostupan",
+        status: "Rezerviran",
         description: "Uključen prozirni poklopac od pleksiglasa.",
         folder: "terarij7",
         count: 5
