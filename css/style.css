@@ -418,6 +418,22 @@ h2{
 
 }
 
+.status.nedostupan{
+
+    background:#fdecea;
+
+    color:#9b2a1f;
+
+}
+
+.status.rezerviran{
+
+    background:#fef9e7;
+
+    color:#7d6008;
+
+}
+
 /* PROCESS AND CARE */
 
 .info-grid{
